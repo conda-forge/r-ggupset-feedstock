@@ -1,4 +1,4 @@
-{% set version = '0.1.0' %}
+{% set version = "0.2.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggupset_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggupset/ggupset_{{ version }}.tar.gz
-  sha256: 8ca1891f06b577437e571264ae91fc3ecc5323090ba88933b6c2171418c7ed94
+  sha256: 70692f802c1d6e84489ec74e90b15b73051ac84cdc83c218012c9b062d599a75
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -46,13 +46,11 @@ test:
 about:
   home: https://github.com/const-ae/ggupset
   license: GPL-3
-  summary: Replace the standard x-axis in 'ggplots' with a combination matrix to visualize complex
-    set overlaps. 'UpSet' has introduced a new way to visualize the overlap of sets
-    as an alternative to Venn diagrams.  This package provides a simple way to produce
-    such plots using 'ggplot2'.  In addition it can convert any categorical axis into
-    a combination matrix axis.
+  summary: Replace the standard x-axis in 'ggplots' with a combination matrix to visualize complex set overlaps. 'UpSet' has introduced a new way to visualize the
+    overlap of sets as an alternative to Venn diagrams.  This package provides a simple way to produce such plots using 'ggplot2'.  In addition it can convert any
+    categorical axis into a combination matrix axis.
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
