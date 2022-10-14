@@ -23,16 +23,17 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
-    - r-ggplot2
+    - r-ggplot2 >=3.3.0
     - r-gtable
     - r-rlang
     - r-scales
     - r-tibble
   run:
     - r-base
-    - r-ggplot2
+    - r-ggplot2 >=3.3.0
     - r-gtable
     - r-rlang
     - r-scales
@@ -45,11 +46,12 @@ test:
 
 about:
   home: https://github.com/const-ae/ggupset
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Replace the standard x-axis in 'ggplots' with a combination matrix to visualize complex set overlaps. 'UpSet' has introduced a new way to visualize the overlap of sets as an alternative to Venn diagrams.  This package provides a simple way to produce such plots using 'ggplot2'.  In addition it can convert any
     categorical axis into a combination matrix axis.
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
