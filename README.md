@@ -1,11 +1,11 @@
-About r-ggupset
-===============
+About r-ggupset-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggupset-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/const-ae/ggupset
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-ggupset-feedstock/blob/main/LICENSE.txt)
 
 Summary: Replace the standard x-axis in 'ggplots' with a combination matrix to visualize complex set overlaps. 'UpSet' has introduced a new way to visualize the overlap of sets as an alternative to Venn diagrams.  This package provides a simple way to produce such plots using 'ggplot2'.  In addition it can convert any categorical axis into a combination matrix axis.
 
