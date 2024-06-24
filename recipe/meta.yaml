@@ -1,4 +1,4 @@
-{% set version = "0.3.0" %}
+{% set version = "0.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/ggupset_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/ggupset/ggupset_{{ version }}.tar.gz
-  sha256: a4db7878e6752d9c9d39b3cd2b2a30f10058212b163025489fb02f089f0b2a1d
+  sha256: 5f7337cd64b1d2499f0304af0482f34a6547bf2187135d86ff0a07cbbcb5cc33
 
 build:
   merge_build_host: true  # [win]
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
